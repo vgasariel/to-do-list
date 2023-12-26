@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon/favicon-32x32.png" sizes="16x16 32x32">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>To do list</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Your To Do List</h1>
+        <div class="date">
+        </div>
+      </header>
+      <main>
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Write a new task"
+          autocomplete="off"
+        />
+        <button type="button" id="addBtn">+</button>
+        <section class="display">
+          <p id="empty">You have no pending tasks.</p>
+        <ul class="taskList">
+        </ul>
+        </section>
+      </main>
+    </div>
+    <script src="JS/script.js"></script>
+  </body>
+</html>
