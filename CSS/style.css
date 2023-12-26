@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    to bottom right,
+    hsl(185, 71%, 37%) 0%,
+    hsl(154, 98%, 58%) 100%
+  );
+  min-height: 100vh;
+}
+
+.container {
+  margin: 2em;
+}
+
+header {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0.5em;
+  color: whitesmoke;
+  text-shadow: 2px 2px 5px #333;
+}
+
+header p {
+  text-align: right;
+}
+
+.date p:first-of-type {
+  font-weight: 600;
+}
+
+main {
+  font-size: 0.9rem;
+  padding: 0.75em;
+  background-color: hsla(0, 0%, 100%, 0.747);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+main input,
+button {
+  font: inherit;
+  padding: 0.75em 0.25em;
+  border: none;
+  background-color: #f5f5f5;
+  margin-bottom: 0.5em;
+}
+
+main input {
+  border-radius: 10px 0 0 10px;
+}
+
+main input:focus {
+  outline: none;
+}
+
+main button {
+  font-weight: 700;
+  border-radius: 0 10px 10px 0;
+  border-left: 1px solid #babababe;
+}
+
+main button:hover {
+  background-color: #bababa;
+}
+
+.display {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#empty {
+  justify-self: center;
+  color: #727272;
+  font-weight: 600;
+  margin: 1em 0;
+}
+
+.taskList {
+  margin: 0.5em 0;
+}
+
+.taskList li {
+  list-style: none;
+  padding: 0.5em;
+  margin-top: .25em;
+  border: 1px outset;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.taskList .done {
+  border: 1px inset;
+  color: #7c7c7c;
+}
+
+.done p {
+  text-decoration: line-through;
+}
+
+.taskList i:hover {
+  color: #f00;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 5% 20%;
+  }
+
+  header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  header .date {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  main {
+    font-size: 1rem;
+    grid-template-columns: 1fr auto;
+  }
+
+  main input,
+  button {
+    padding: 0.75em;
+  }
+
+  main button {
+    cursor: pointer;
+  }
+
+  .taskList i {
+    font-size: larger;
+    padding: 5px;
+  }
+
+  .taskList i:hover {
+    cursor: pointer;
+    color: #f00;
+  }
+}
